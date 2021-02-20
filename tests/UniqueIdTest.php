@@ -60,7 +60,7 @@ class UniqueIdTest extends TestCase
     public function setRepetitions(): array
     {
         $return = [];
-        for ($i=0; $i < self::TOTAL_TESTS; $i++) {
+        for ($i=1; $i <= self::TOTAL_TESTS; $i++) {
             $return['Cycle '.$i] = [$i];
         }
         return $return;
