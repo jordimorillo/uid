@@ -9,8 +9,8 @@ use Src\UniqueId;
 
 class UniqueIdTest extends TestCase
 {
-    private const TOTAL_TESTS = 1;
-    private const TOTAL_WORKERS = 2000;
+    private const TOTAL_TESTS = 10;
+    private const TOTAL_WORKERS = 100;
     private const TOTAL_GENERATED_IDS = 50;
 
     public function testCanInstantiate(): void
