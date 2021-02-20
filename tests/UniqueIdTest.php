@@ -9,7 +9,7 @@ use Src\UniqueId;
 
 class UniqueIdTest extends TestCase
 {
-    private const TOTAL_TESTS = 10;
+    private const TOTAL_CYCLES = 10;
     private const TOTAL_WORKERS = 100;
     private const TOTAL_GENERATED_IDS = 50;
 
@@ -60,7 +60,7 @@ class UniqueIdTest extends TestCase
     public function setRepetitions(): array
     {
         $return = [];
-        for ($i=1; $i <= self::TOTAL_TESTS; $i++) {
+        for ($i=1; $i <= self::TOTAL_CYCLES; $i++) {
             $return['Cycle '.$i] = [$i];
         }
         return $return;
