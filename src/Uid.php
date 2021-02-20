@@ -12,8 +12,9 @@ class Uid
     {
         if ($uid === null) {
             $microtimeStart = $this->getMicrotime();
+            $objectIdentifier = spl_object_id($this);
             $random = $this->getRandomInteger();
-            $this->uid = $microtimeStart . $random;
+            $this->uid = $microtimeStart . $objectIdentifier . $random;
         } else {
             $this->uid = $uid;
         }
@@ -38,6 +39,6 @@ class Uid
 
     public function getRandomInteger(): int
     {
-        return random_int(10000000, 99999999);
+        return random_int(1000, 9999);
     }
 }
