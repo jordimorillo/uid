@@ -61,7 +61,7 @@ class UniqueIdTest extends TestCase
     {
         $return = [];
         for ($i=0; $i < self::TOTAL_TESTS; $i++) {
-            $return['Repetition '.$i] = [$i];
+            $return['Cycle '.$i] = [$i];
         }
         return $return;
     }
