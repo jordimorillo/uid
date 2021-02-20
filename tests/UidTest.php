@@ -5,7 +5,7 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 use Spatie\Async\Pool;
-use Src\Uid;
+use JordiMorillo\Uid;
 
 class UidTest extends TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Src;
+namespace JordiMorillo;
 
 
 class Uid
@@ -11,10 +11,7 @@ class Uid
     public function __construct(string $uid = null)
     {
         if ($uid === null) {
-            $microtime = $this->getMicrotime();
-            $objectIdentifier = spl_object_id($this);
-            $objectHash = hexdec(spl_object_hash($this));
-            $this->uid = $objectIdentifier . $objectHash . $microtime;
+            $this->uid = $this->getObjectIdentifier() . $this->getObjectHashAsInteger() . $this->getMicrotime();
         } else {
             $this->uid = $uid;
         }
@@ -37,8 +34,13 @@ class Uid
         return (int)$microtime;
     }
 
-    public function getRandomInteger(): int
+    public function getObjectHashAsInteger(): int
     {
-        return random_int(100, 999);
+        return hexdec(spl_object_hash($this));
+    }
+
+    public function getObjectIdentifier(): int
+    {
+        return spl_object_id($this);
     }
 }
