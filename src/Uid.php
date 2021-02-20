@@ -4,7 +4,7 @@
 namespace Src;
 
 
-class UniqueId
+class Uid
 {
     private string $uid;
 

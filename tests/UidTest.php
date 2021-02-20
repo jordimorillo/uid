@@ -5,9 +5,9 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 use Spatie\Async\Pool;
-use Src\UniqueId;
+use Src\Uid;
 
-class UniqueIdTest extends TestCase
+class UidTest extends TestCase
 {
     private const TOTAL_CYCLES = 10;
     private const TOTAL_WORKERS = 100;
@@ -15,7 +15,7 @@ class UniqueIdTest extends TestCase
 
     public function testCanInstantiate(): void
     {
-        self::assertInstanceOf(UniqueId::class, new UniqueId());
+        self::assertInstanceOf(Uid::class, new Uid());
     }
 
     /**
@@ -31,7 +31,7 @@ class UniqueIdTest extends TestCase
                 static function(){
                     $ids = [];
                     for ($i=0; $i<self::TOTAL_GENERATED_IDS; $i++) {
-                        $ids[] = new UniqueId();
+                        $ids[] = new Uid();
                     }
                     return $ids;
                 }

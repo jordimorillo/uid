@@ -16,9 +16,9 @@ I made a test to check how often this can happen, but until now I've not found a
 ```php
 <?php
 
-use JordiMorillo\UniqueId;
+use JordiMorillo\Uid;
 
-class MyProductId extends UniqueId {}
+class MyProductId extends Uid {}
 
 $myProductId = new MyProductId();
 
