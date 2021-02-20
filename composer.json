@@ -1,0 +1,23 @@
+{
+    "name": "mister/unique-id",
+    "authors": [
+        {
+            "name": "Jordi Morillo",
+            "email": "jordi@playmister.com"
+        }
+    ],
+    "require": {
+        "spatie/async": "^1.5"
+    }
+    ,
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tests\\": "tests//",
+            "Src\\": "src//"
+        }
+    }
+}
