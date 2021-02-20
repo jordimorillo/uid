@@ -11,10 +11,10 @@ class Uid
     public function __construct(string $uid = null)
     {
         if ($uid === null) {
-            $microtimeStart = $this->getMicrotime();
+            $microtime = $this->getMicrotime();
             $objectIdentifier = spl_object_id($this);
-            $random = $this->getRandomInteger();
-            $this->uid = $microtimeStart . $objectIdentifier . $random;
+            $objectHash = hexdec(spl_object_hash($this));
+            $this->uid = $objectIdentifier . $objectHash . $microtime;
         } else {
             $this->uid = $uid;
         }
@@ -39,6 +39,6 @@ class Uid
 
     public function getRandomInteger(): int
     {
-        return random_int(1000, 9999);
+        return random_int(100, 999);
     }
 }
