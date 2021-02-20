@@ -50,7 +50,7 @@ class UidTest extends TestCase
         $comparingArray = [];
         foreach ($workersOutput as $uid) {
             if (!empty($comparingArray[$uid])) {
-                self::fail('The sequence is not unique at repetition #'.$repetition);
+                self::fail('The sequence is not unique at cycle #'.$repetition);
             }
             $comparingArray[$uid] = $uid;
         }

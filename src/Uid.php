@@ -36,7 +36,9 @@ class Uid
 
     public function getObjectHashAsInteger(): int
     {
-        return hexdec(spl_object_hash($this));
+        $hexdec = (string)hexdec(spl_object_hash($this));
+        $hexdec = str_replace('.', '', $hexdec);
+        return (int)$hexdec;
     }
 
     public function getObjectIdentifier(): int
