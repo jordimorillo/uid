@@ -9,7 +9,7 @@ The formula is:
 
 UniqueId = `microtime` + `a-random-7-digit-integer`
 
-As this approach is very simple, it may collide if the microtime and the random 6 digit integer coincide. 
+As this approach is very simple, it may collide if the microtime and the random integer coincide. 
 
 I made a test to check how often this can happen, but until now I've not found any case.
 
