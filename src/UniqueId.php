@@ -6,23 +6,27 @@ namespace Src;
 
 class UniqueId
 {
-    private string $microtimeStart;
-    private int $random;
+    private string $uid;
 
-    public function __construct()
+    public function __construct(int $uid = null)
     {
-        $this->microtimeStart = $this->getMicrotime();
-        $this->random = $this->getRandomInteger();
+        if ($uid === null) {
+            $microtimeStart = $this->getMicrotime();
+            $random = $this->getRandomInteger();
+            $this->uid = (int) $microtimeStart . $random;
+        } else {
+            $this->uid = $uid;
+        }
     }
 
     public function toString(): string
     {
-        return (string) $this;
+        return (string)$this;
     }
 
     public function __toString(): string
     {
-        return $this->microtimeStart . $this->random;
+        return $this->uid;
     }
 
     public function getMicrotime(): string
