@@ -8,12 +8,12 @@ class UniqueId
 {
     private string $uid;
 
-    public function __construct(int $uid = null)
+    public function __construct(string $uid = null)
     {
         if ($uid === null) {
             $microtimeStart = $this->getMicrotime();
             $random = $this->getRandomInteger();
-            $this->uid = (int) $microtimeStart . $random;
+            $this->uid = $microtimeStart . $random;
         } else {
             $this->uid = $uid;
         }
@@ -29,11 +29,11 @@ class UniqueId
         return $this->uid;
     }
 
-    public function getMicrotime(): string
+    public function getMicrotime(): int
     {
         $microtime = (string)microtime(false);
         $microtime = str_replace(['.', ' '], '', $microtime);
-        return $microtime;
+        return (int)$microtime;
     }
 
     public function getRandomInteger(): int
