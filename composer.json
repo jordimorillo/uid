@@ -6,7 +6,7 @@
             "email": "jordi@playmister.com"
         }
     ],
-    "description": "A package to generate simple unique identifiers that can also be used as primary keys in relational databases",
+    "description": "A package to self-generate 32bit unique integer identifiers that can be used as primary keys in relational databases",
     "require": {
         "spatie/async": "^1.5"
     }
