@@ -11,7 +11,7 @@ class Uid
     public function __construct(string $uid = null)
     {
         if ($uid === null) {
-            $this->uid = $this->getObjectIdentifier() . $this->getObjectHashAsInteger() . $this->getMicrotime();
+            $this->uid = $this->getObjectIdentifier() . $this->randomInteger() . $this->getMicrotime();
         } else {
             $this->uid = $uid;
         }
@@ -34,11 +34,9 @@ class Uid
         return (int)$microtime;
     }
 
-    public function getObjectHashAsInteger(): int
+    public function randomInteger(): int
     {
-        $hexdec = (string)hexdec(spl_object_hash($this));
-        $hexdec = str_replace('.', '', $hexdec);
-        return (int)$hexdec;
+        return random_int(1000000, 9999999);
     }
 
     public function getObjectIdentifier(): int
