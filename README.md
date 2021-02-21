@@ -7,9 +7,9 @@ The Identifier is developed as a StringValueObject so it will be casted as a str
 
 The formula is:
 
-UniqueId = `php-object-identifier` + `php-object-hash-as-integer` + `microtime`
+UniqueId = `php-object-identifier` + `random-integer` + `microtime`
 
-To this identifier gets repeated it should coincide the object identifier, the object hash and the microtime. That is really very improbable.
+To this identifier gets repeated it should coincide the object identifier, the microtime, and a 7 number random integer. That is really very improbable.
 
 I made a test to check how often this can happen, but until now I've not found any case.
 
