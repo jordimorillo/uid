@@ -3,7 +3,7 @@ The goal for this package is to provide a solution to those who need a simple wa
 
 The basis idea was to have something similar to Snowflake identifiers that doesn't depend on redis or any other cache system with workers to generate the identifiers.
 
-The Identifier is developed as a StringValueObject so it will be casted as a string if needed.
+The Identifier object can be casted as a string.
 
 The formula is:
 
