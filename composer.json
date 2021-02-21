@@ -7,7 +7,7 @@
         }
     ],
     "description": "A package to self-generate 32bit unique integer identifiers that can be used as primary keys in relational databases",
-    "license": "AGPL-3.0-or-later",
+    "license": "GPL-3.0-or-later",
     "require": {
         "spatie/async": "^1.5"
     }
