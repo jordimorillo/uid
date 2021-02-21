@@ -18,6 +18,13 @@ class UidTest extends TestCase
         self::assertInstanceOf(Uid::class, new Uid());
     }
 
+    public function testIs32Bits(): void
+    {
+        $uid = new Uid();
+        $uidString = $uid->toString();
+        self::assertEquals(32, strlen($uidString));
+    }
+
     /**
      * @dataProvider setRepetitions()
      * @param int $repetition

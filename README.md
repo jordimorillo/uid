@@ -1,9 +1,10 @@
 # Unique Integer Identifiers for PHP
 The goal for this package is:
 
-- To provide unique identifiers
-- The identifiers will be integer so they can be used as primary keys in relational databases to keep performance
+- To provide unique identifiers.
+- The identifiers will be integer so they can be used as primary keys in relational databases to keep performance.
 - Do not depend on third services to generate the Ids as happens with workers.
+- The generated identifier will be 32 bytes.
 
 The current formula is:
 

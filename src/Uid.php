@@ -14,6 +14,7 @@ class Uid
     {
         if ($uid === null) {
             $this->uid = $this->getObjectIdentifier() . $this->randomInteger() . $this->getMicrotime();
+            $this->uid += 10 ** 31;
         } else {
             $this->uid = $uid;
         }
@@ -26,7 +27,7 @@ class Uid
 
     public function __toString(): string
     {
-        return $this->uid;
+        return (string)number_format($this->uid, 0, '','');
     }
 
     public function getMicrotime(): int
@@ -46,6 +47,6 @@ class Uid
      */
     public function randomInteger(): int
     {
-        return random_int(1000000, 9999999);
+        return random_int(1000000000, 9999999999);
     }
 }
