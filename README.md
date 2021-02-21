@@ -22,7 +22,7 @@ class MyProductId extends Uid {}
 
 $myProductId = new MyProductId();
 
-echo "$myProductId"; //This should cast the identifier as an integer
+echo "$myProductId"; //This should cast the identifier as a string of numbers
 
 $myProductIdString = $myProductId->toString();
 
