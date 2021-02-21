@@ -7,6 +7,7 @@
         }
     ],
     "description": "A package to self-generate 32bit unique integer identifiers that can be used as primary keys in relational databases",
+    "license": "GNU GENERAL PUBLIC LICENSE v3",
     "require": {
         "spatie/async": "^1.5"
     }
