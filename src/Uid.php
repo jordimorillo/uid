@@ -36,16 +36,16 @@ class Uid
         return (int)$microtime;
     }
 
+    public function getObjectIdentifier(): int
+    {
+        return spl_object_id($this);
+    }
+
     /**
      * @throws Exception
      */
     public function randomInteger(): int
     {
         return random_int(1000000, 9999999);
-    }
-
-    public function getObjectIdentifier(): int
-    {
-        return spl_object_id($this);
     }
 }
