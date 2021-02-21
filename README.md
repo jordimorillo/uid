@@ -11,8 +11,7 @@ UniqueId = `php-object-identifier` + `random-integer` + `microtime`
 
 To this identifier gets repeated it should coincide the object identifier, the microtime, and a 7 number random integer. That is really very improbable.
 
-I made a test to check how often this can happen, but until now I've not found any case.
-
+Example of use:
 ```php
 <?php
 
@@ -28,4 +27,3 @@ $myProductIdString = $myProductId->toString();
 
 $anotherProductId = new MyProductId($myProductIdString); //This should be a similar equal as $myProductId
 ```
-
