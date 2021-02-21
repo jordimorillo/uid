@@ -4,6 +4,8 @@
 namespace JordiMorillo;
 
 
+use Exception;
+
 class Uid
 {
     private string $uid;
@@ -34,6 +36,9 @@ class Uid
         return (int)$microtime;
     }
 
+    /**
+     * @throws Exception
+     */
     public function randomInteger(): int
     {
         return random_int(1000000, 9999999);
