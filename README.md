@@ -1,4 +1,4 @@
-# Unique Identifiers for PHP
+# Unique Integer Identifiers for PHP
 The goal for this package is to provide a solution to those who need a simple way to create unique identifiers that can also be used as primary key for relational databases.
 
 The basis idea was to have something similar to Snowflake identifiers that doesn't depend on redis or any other cache system with workers to generate the identifiers.
