@@ -1,11 +1,11 @@
 # Unique Integer Identifiers for PHP
-The goal for this package is to provide a solution to those who need a simple way to create unique identifiers that can also be used as primary key for relational databases.
+The goal for this package is:
 
-The basis idea was to have something similar to Snowflake identifiers that doesn't depend on redis or any other cache system with workers to generate the identifiers.
+- To provide unique identifiers
+- The identifiers will be integer so they can be used as primary keys in relational databases to keep performance
+- Do not depend on third services to generate the Ids as happens with workers.
 
-The Identifier object can be casted as a string.
-
-The formula is:
+The current formula is:
 
 UniqueId = `php-object-identifier` + `random-integer` + `microtime`
 
