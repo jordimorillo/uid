@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace JordiMorillo;
 
 use Exception;
+use Jordimorillo\Uid\Exception\RandomIntegerGenerationException;
 
 class Uid
 {
     private string $uid;
 
     /**
-     * @throws Exception
+     * @throws RandomIntegerGenerationException
      */
     public function __construct(string $uid = null)
     {
@@ -46,10 +47,15 @@ class Uid
     }
 
     /**
-     * @throws Exception
+     * @throws RandomIntegerGenerationException
      */
     public function randomInteger(): int
     {
-        return random_int(1000000000, 9999999999);
+        try {
+            $randomInteger = random_int(1000000000, 9999999999);
+        } catch (Exception $exception) {
+            throw new RandomIntegerGenerationException($exception->getMessage());
+        }
+        return $randomInteger;
     }
 }
