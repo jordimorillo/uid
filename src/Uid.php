@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace JordiMorillo;
-
 
 use Exception;
 
@@ -27,7 +27,7 @@ class Uid
 
     public function __toString(): string
     {
-        return (string)number_format($this->uid, 0, '','');
+        return (string)number_format($this->uid, 0, '', '');
     }
 
     public function getMicrotime(): int
