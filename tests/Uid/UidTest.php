@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests;
+namespace Tests\Uid;
 
 use PHPUnit\Framework\TestCase;
 use Spatie\Async\Pool;
-use JordiMorillo\Uid;
+use JordiMorillo\Uid\Uid;
 
 class UidTest extends TestCase
 {

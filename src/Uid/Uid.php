@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JordiMorillo;
+namespace JordiMorillo\Uid;
 
 use Exception;
 use Jordimorillo\Uid\Exception\RandomIntegerGenerationException;

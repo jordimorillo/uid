@@ -13,10 +13,11 @@ UniqueId = `php-object-identifier` + `random-integer` + `microtime`
 To this identifier gets repeated it should coincide the object identifier, the microtime, and a 7 number random integer. That is really very improbable but may happen in very rare ocasion.
 
 Example of use:
+
 ```php
 <?php
 
-use JordiMorillo\Uid;
+use JordiMorillo\Uid\Uid;
 
 class MyProductId extends Uid {}
 
