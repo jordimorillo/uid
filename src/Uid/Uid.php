@@ -9,15 +9,15 @@ use Jordimorillo\Uid\Exception\RandomIntegerGenerationException;
 
 class Uid
 {
-    private string $uid;
+    private float $uid;
 
     /**
      * @throws RandomIntegerGenerationException
      */
-    public function __construct(string $uid = null)
+    public function __construct(float $uid = null)
     {
         if ($uid === null) {
-            $this->uid = $this->getObjectIdentifier() . $this->randomInteger() . $this->getMicrotime();
+            $this->uid = (float) ($this->getObjectIdentifier() . $this->randomInteger() . $this->getMicrotime());
             $this->uid += 10 ** 31;
         } else {
             $this->uid = $uid;
