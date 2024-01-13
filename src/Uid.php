@@ -10,6 +10,9 @@ class Uid
 {
     private string $uid;
 
+    /**
+     * @throws Exception
+     */
     public function __construct(string $uid = null)
     {
         if ($uid === null) {
@@ -27,12 +30,12 @@ class Uid
 
     public function __toString(): string
     {
-        return (string)number_format($this->uid, 0, '', '');
+        return number_format($this->uid, 0, '', '');
     }
 
     public function getMicrotime(): int
     {
-        $microtime = (string)microtime(false);
+        $microtime = (string)microtime();
         $microtime = str_replace(['.', ' '], '', $microtime);
         return (int)$microtime;
     }
