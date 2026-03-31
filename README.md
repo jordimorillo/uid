@@ -29,3 +29,8 @@ $myProductIdString = $myProductId->toString();
 
 $anotherProductId = new MyProductId($myProductIdString); //This should be a similar equal as $myProductId
 ```
+---
+
+## 👤 Autor
+
+**Jordi Morillo Sells** — [LinkedIn](https://www.linkedin.com/in/jordi-morillo-sells/)
